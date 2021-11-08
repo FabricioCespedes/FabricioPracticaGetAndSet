@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cono.cs" />
+    <Compile Include="Clases\Prisma.cs" />
+    <Compile Include="Clases\Ortoedro.cs" />
+    <Compile Include="Clases\Cubo.cs" />
+    <Compile Include="Clases\Cilindro.cs" />
+    <Compile Include="Clases\Octaedro.cs" />
+    <Compile Include="Clases\Tetraedro.cs" />
+    <Compile Include="Clases\Piramide.cs" />
     <Compile Include="Clases\Esfera.cs" />
     <Compile Include="Clases\Figura.cs" />
     <Compile Include="frmMenuPrincipal.cs">
@@ -54,13 +62,68 @@
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Logica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\frmCilindro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmCilindro.Designer.cs">
+      <DependentUpon>frmCilindro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmCono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmCono.Designer.cs">
+      <DependentUpon>frmCono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmCubo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmCubo.Designer.cs">
+      <DependentUpon>frmCubo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\frmEsfera.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\frmEsfera.Designer.cs">
       <DependentUpon>frmEsfera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmHistorial.Designer.cs">
+      <DependentUpon>frmHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmOctaedro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmOctaedro.Designer.cs">
+      <DependentUpon>frmOctaedro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmOrtoedro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmOrtoedro.Designer.cs">
+      <DependentUpon>frmOrtoedro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmPiramide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmPiramide.Designer.cs">
+      <DependentUpon>frmPiramide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmPrisma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmPrisma.Designer.cs">
+      <DependentUpon>frmPrisma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmTetraedro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmTetraedro.Designer.cs">
+      <DependentUpon>frmTetraedro.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
@@ -74,8 +137,35 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\frmCilindro.resx">
+      <DependentUpon>frmCilindro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmCono.resx">
+      <DependentUpon>frmCono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmCubo.resx">
+      <DependentUpon>frmCubo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\frmEsfera.resx">
       <DependentUpon>frmEsfera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmHistorial.resx">
+      <DependentUpon>frmHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmOctaedro.resx">
+      <DependentUpon>frmOctaedro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmOrtoedro.resx">
+      <DependentUpon>frmOrtoedro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmPiramide.resx">
+      <DependentUpon>frmPiramide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmPrisma.resx">
+      <DependentUpon>frmPrisma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmTetraedro.resx">
+      <DependentUpon>frmTetraedro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -90,8 +180,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modelo\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
