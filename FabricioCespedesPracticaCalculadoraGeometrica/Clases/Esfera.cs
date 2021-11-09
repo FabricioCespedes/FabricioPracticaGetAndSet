@@ -30,23 +30,21 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         }
 
         /// <summary>
-        /// Método que retorna el área Esfera. Recibe el radio double. 
+        /// Método que retorna el área Esfera. No recibe parametros. 
         /// </summary>
-        /// <param name="radio"></param>
         /// <returns>Método que calcula el área del esfera</returns>
-        public override double area(double radio, double dato = 0, double dato2 = 0)
+        public override double area()
         {
-            return 4 * pi * Math.Pow(radio, 2) ;
+            return 4 * pi * Math.Pow(getDato1(), 2) ;
         }
 
         /// <summary>
-        /// Método que retorna el volumen Esfera. Recibe el radio double. 
+        /// Método que retorna el volumen Esfera. No recibe parametros. 
         /// </summary>
-        /// <param name="radio"></param>
         /// <returns>Método que calcula el volumen del esfera</returns>
-        public override double volumen(double radio, double dato1 = 0, double dato2 = 0)
+        public override double volumen(double dato2 = 0)
         {
-            return (4 * pi * Math.Pow(radio, 3))/3; ;
+            return (4 * pi * Math.Pow(getDato1(), 3))/3; ;
         }
 
 
@@ -57,7 +55,7 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <remarks>Método que retorna el historial del calculo realizado</remarks>
         public override string ToString()
         {
-            return "Esfera" + "Radio = " + obtenerDato1().ToString() + " Área = " + area(obtenerDato1()) + "Volumen = " + volumen(obtenerDato1());
+            return "Esfera" + "; Radio = " + getDato1().ToString() + "; Área = " + area() + "; Volumen = " + volumen();
         }
     }
 }

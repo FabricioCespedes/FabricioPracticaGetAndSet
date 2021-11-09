@@ -30,13 +30,12 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
 
 
         /// <summary>
-        /// Método que retorna el área del Tetraedro. Recibe por parámetro double (altura). 
+        /// Método que retorna el área del Tetraedro. No recibe parametros. 
         /// </summary>
-        /// <param name="altura"></param>
         /// <returns>Método que calcula el área del Tetraedro</returns>
-        public override double area(double altura, double dato = 0, double dato2 = 0)
+        public override double area()
         {
-            return Math.Sqrt(3)*Math.Pow(altura,2);
+            return Math.Sqrt(3)*Math.Pow(getDato1(),2);
         }
 
         /// <summary>
@@ -46,7 +45,7 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <remarks>Método que retorna el historial del calculo realizado</remarks>
         public override string ToString()
         {
-            return "Tetraedro" + "Altura = " + obtenerDato1().ToString() + " Área = " + area(obtenerDato1()) + "Volumen = " + volumen(obtenerDato1());
+            return "Tetraedro" + "; Altura = " + getDato1().ToString() + "; Área = " + area() + "; Volumen = " + volumen(12);
         }
     }
 }

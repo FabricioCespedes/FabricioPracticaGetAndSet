@@ -25,7 +25,7 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
             {
                 Octaedro octaedro = new Octaedro((double)numericUpDown1.Value);
 
-                textBox1.Text = octaedro.area(octaedro.obtenerDato1()).ToString();
+                textBox1.Text = octaedro.area().ToString();
 
                 textBox2.Text = octaedro.volumen(3).ToString();
 

@@ -11,6 +11,17 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         double apotema;
 
         /// <summary>
+        /// Método que retorna y establece la apotema de la clase Prisma.
+        /// </summary>
+        /// <returns>Apotema del Prisma</returns>
+        /// <remarks>Método get y set</remarks>
+        public double Apotema 
+        { 
+            get => apotema; 
+            set => apotema = value; 
+        }
+
+        /// <summary>
         /// Constructor vacio de la clase Prisma.
         /// </summary>
         /// <remarks>Constructor vacio, sirve para realizar instancia vacias</remarks>
@@ -30,15 +41,8 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
             this.apotema = apotema;
         }
 
-        /// <summary>
-        /// Método que retorna apotema.
-        /// </summary>
-        /// <returns>Apotema del Prisma</returns>
-        /// <remarks>Método get</remarks>
-        public double obtenerApotema()
-        {
-            return apotema; 
-        }
+
+
 
         /// <summary>
         /// Método que retorna el área del prisma. Recibe por parámetro 2 double (altura,apotema). 
@@ -46,9 +50,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <param name="altura"></param>
         /// <param name="apotema"></param>
         /// <returns>Método que calcula el área del prisma</returns>
-        public override double area(double altura, double apotema, double dato2 = 0)
+        public override double area()
         {
-            return (  apotema*Math.Tan(36)*5 )* (altura + apotema) ;
+            return (  apotema*Math.Tan(36)*5 )* (getDato1() + apotema) ;
         }
 
         /// <summary>
@@ -57,9 +61,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <param name="altura"></param>
         /// <param name="apotema"></param>
         /// <returns>Método que calcula el volumen del prisma</returns>
-        public override double volumen(double altura, double apotema = 0, double dato2 = 0)
+        public override double volumen(double dato2 = 0)
         {
-            return  (((apotema * Math.Tan(36) * 5)*apotema)/2)*altura ;
+            return  (((apotema * Math.Tan(36) * 5)*apotema)/2)* getDato1();
         }
 
         /// <summary>
@@ -69,10 +73,10 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <remarks>Método que retorna el historial del calculo realizado</remarks>
         public override string ToString()
         {
-            return "Prisma" + "Altura = " + obtenerDato1().ToString()
-                + "Apotema = " + obtenerApotema().ToString()
-                + " Área = " + area(obtenerDato1(),obtenerApotema()) 
-                + "Volumen = " + volumen(obtenerDato1(),obtenerApotema());
+            return "Prisma" + "; Altura = " + getDato1().ToString()
+                + "; Apotema = " + Apotema.ToString()
+                + "; Área = " + area() 
+                + "; Volumen = " + volumen();
         }
     }
 }

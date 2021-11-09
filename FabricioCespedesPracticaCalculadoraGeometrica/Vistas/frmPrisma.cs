@@ -34,7 +34,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
 
                 Prisma prisma = new Prisma(altura,apotema);
 
-                textBox2.Text = prisma.volumen(altura, apotema).ToString();
+                textBox1.Text = prisma.area().ToString();
+
+                textBox2.Text = prisma.volumen().ToString();
 
                 Logica logica = new Logica();
 

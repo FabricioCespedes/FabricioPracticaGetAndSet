@@ -29,13 +29,12 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         }
 
         /// <summary>
-        /// Método que retorna el área Octaedro. Recibe altura double. 
+        /// Método que retorna el área Octaedro. No recibe parametros.
         /// </summary>
-        /// <param name="altura"></param>
         /// <returns>Método que calcula el área del Octaedro</returns>
-        public override double area(double altura, double dato = 0, double dato2 = 0)
+        public override double area()
         {
-            return 2* Math.Sqrt(3)*Math.Pow(altura,2);
+            return 2* Math.Sqrt(3)*Math.Pow(getDato1(),2);
         }
 
         /// <summary>
@@ -45,7 +44,7 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <remarks>Método que retorna el historial del calculo realizado</remarks>
         public override string ToString()
         {
-            return "Octaedro" + "Altura = " + obtenerDato1().ToString() + " Área = " + area(obtenerDato1()) + "Volumen = " + volumen(obtenerDato1());
+            return "Octaedro" + "; Altura = " + getDato1().ToString() + "; Área = " + area() + "; Volumen = " + volumen(3);
         }
     }
 }

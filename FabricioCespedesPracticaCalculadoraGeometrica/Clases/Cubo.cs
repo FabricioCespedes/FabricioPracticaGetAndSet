@@ -31,23 +31,22 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         }
 
         /// <summary>
-        /// Método que retorna el área Cubo. Recibe el ancho double. 
+        /// Método que retorna el área Cubo. No recibe parametros.
         /// </summary>
-        /// <param name="ancho"></param>
         /// <returns>Método que calcula el área del cubo</returns>
-        public override double area(double ancho, double dato = 0, double dato2 = 0)
+        public override double area()
         {
-            return 6 *  Math.Pow(ancho, 2) ;
+            return 6 *  Math.Pow(getDato1(), 2) ;
         }
 
         /// <summary>
-        /// Método que retorna el volumen Cubo. Recibe el ancho double. 
+        /// Método que retorna el volumen Cubo. No recibe parametros.
         /// </summary>
         /// <param name="ancho"></param>
         /// <returns>Método que calcula el volumen del cubo</returns>
-        public override double volumen(double ancho, double dato1 =0, double dato2 = 0)
+        public override double volumen(double dato2 = 0)
         {
-            return  Math.Pow(ancho, 3) ;
+            return  Math.Pow(getDato1(), 3) ;
         }
 
         /// <summary>
@@ -57,7 +56,7 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <remarks>Método que retorna el historial del calculo realizado</remarks>
         public override string ToString()
         {
-            return "Cubo," + "Ancho = " + obtenerDato1().ToString() + " Área = " + area(obtenerDato1()) + "Volumen = " + volumen(obtenerDato1());
+            return "Cubo ," + " Ancho = " + getDato1().ToString() + "; Área = " + area() + "; Volumen = " + volumen();
         }
     }
 }

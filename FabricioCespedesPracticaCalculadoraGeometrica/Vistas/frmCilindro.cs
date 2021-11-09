@@ -29,7 +29,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
 
                 Cilindro cilindro = new Cilindro(radio, altura);
 
-                textBox2.Text = cilindro.volumen(radio,altura).ToString();
+                textBox1.Text = cilindro.area().ToString();
+
+                textBox2.Text = cilindro.volumen().ToString();
 
                 Logica logica = new Logica();
 

@@ -25,9 +25,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
             {
                 Cubo cubo = new Cubo((double)numericUpDown1.Value);
 
-                textBox1.Text = cubo.area(cubo.obtenerDato1()).ToString();
+                textBox1.Text = cubo.area().ToString();
 
-                textBox2.Text = cubo.volumen(cubo.obtenerDato1()).ToString();
+                textBox2.Text = cubo.volumen().ToString();
 
                 Logica logica = new Logica();
 

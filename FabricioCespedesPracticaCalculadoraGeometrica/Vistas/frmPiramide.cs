@@ -31,9 +31,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
 
                 Piramide pira = new Piramide(baseP, altura, altura2);
 
-                textBox1.Text = pira.area(altura, baseP, altura2).ToString();
+                textBox1.Text = pira.area().ToString();
 
-                textBox2.Text = pira.volumen(altura, baseP).ToString();
+                textBox2.Text = pira.volumen().ToString();
 
                 Logica logica = new Logica();
 

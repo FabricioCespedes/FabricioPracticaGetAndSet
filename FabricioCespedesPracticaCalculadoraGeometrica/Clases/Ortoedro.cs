@@ -39,9 +39,19 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// </summary>
         /// <returns>Lado b del Ortoedro</returns>
         /// <remarks>Método get</remarks>
-        public double obtenerB()
+        public double getB()
         {
             return b;
+        }
+
+        /// <summary>
+        /// Método que establece el lado b.
+        /// </summary>
+        /// <returns>Lado b del Ortoedro</returns>
+        /// <remarks>Método set</remarks>
+        public void setB(double b)
+        {
+            this.b = b;
         }
 
         /// <summary>
@@ -49,33 +59,36 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// </summary>
         /// <returns>Lado c del Ortoedro</returns>
         /// <remarks>Método get</remarks>
-        public double obtenerC()
+        public double getC()
         {
             return c;
         }
 
         /// <summary>
-        /// Método que retorna el área Ortoedro. Recibe por parámetro 3 double (lado a,b,c). 
+        /// Método que establece el lado c.
         /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <param name="c"></param>
-        /// <returns>Método que calcula el área del Ortoedro</returns>
-        public override double area(double a, double b, double c)
+        /// <returns>Lado c del Ortoedro</returns>
+        /// <remarks>Método set</remarks>
+        public void setC(double c)
         {
-            return 2*(a*b+a*c+b*c) ;
+            this.c = c;
+        }
+        /// <summary>
+        /// Método que retorna el área Ortoedro. No recibe parámetro . 
+        /// </summary>
+        /// <returns>Método que calcula el área del Ortoedro</returns>
+        public override double area()
+        {
+            return 2*(getDato1()*b+ getDato1()*c+b*c) ;
         }
 
         /// <summary>
-        /// Método que retorna el volumen Ortoedro. Recibe por parámetro 3 double (lado a,b,c). 
+        /// Método que retorna el volumen Ortoedro. No recibe parámetros. 
         /// </summary>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <param name="c"></param>
         /// <returns>Método que calcula el volumen del Ortoedro</returns>
-        public override double volumen(double a, double b, double c)
+        public override double volumen(double dato=0)
         {
-            return a*b*c;
+            return getDato1() * b*c;
         }
 
         /// <summary>
@@ -85,13 +98,13 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <remarks>Método que retorna el historial del calculo realizado</remarks>
         public override string ToString()
         {
-            return "Ortoedro" + "Lado a = " + obtenerDato1().ToString()
+            return "Ortoedro" + "; Lado a = " + getDato1().ToString()
 
-            + "Lado b = " + obtenerB().ToString()
+            + "; Lado b = " + getB().ToString()
 
-             + "Lado C = " + obtenerC().ToString()
+             + "; Lado C = " + getC().ToString()
 
-            + " Área = " + area(obtenerDato1(),obtenerB(),obtenerC()) + "Volumen = " + volumen(obtenerDato1(), obtenerB(), obtenerC());
+            + "; Área = " + area() + "; Volumen = " + volumen();
         }
     }
 }

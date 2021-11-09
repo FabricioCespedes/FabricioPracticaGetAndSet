@@ -25,9 +25,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
             {
                 Esfera esfera = new Esfera((double)numericUpDown1.Value);
 
-                textBox1.Text = esfera.area(esfera.obtenerDato1()).ToString();
+                textBox1.Text = esfera.area().ToString();
 
-                textBox2.Text = esfera.volumen(esfera.obtenerDato1()).ToString();
+                textBox2.Text = esfera.volumen().ToString();
 
                 Logica logica = new Logica();
 

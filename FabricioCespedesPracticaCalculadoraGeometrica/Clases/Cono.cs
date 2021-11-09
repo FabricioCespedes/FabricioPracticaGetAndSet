@@ -36,13 +36,23 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         }
 
         /// <summary>
-        /// Método que retarna la generatriz.
+        /// Método que retorna la generatriz.
         /// </summary>
         /// <returns>generatriz del cono</returns>
         /// <remarks>Método get</remarks>
-        public double obtenerG()
+        public double getGeneratriz()
         {
             return generatriz;
+        }
+
+        /// <summary>
+        /// Método que establece la generatriz.
+        /// </summary>
+        /// <returns>generatriz del cono</returns>
+        /// <remarks>Método get</remarks>
+        public void setGeneratriz(double generatriz)
+        {
+            this.generatriz = generatriz; ;
         }
 
         /// <summary>
@@ -50,33 +60,37 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// </summary>
         /// <returns>Radio del cono</returns>
         /// <remarks>Método get</remarks>
-        public double obtenerRadio()
+        public double getRadio()
         {
             return radio;
         }
 
         /// <summary>
-        /// Método que retorna el área Cono. Recibe 3 párametros double altura, generatriz, radio. 
+        /// Método que establece el radio .
         /// </summary>
-        /// <param name="gene"></param>
-        /// <param name="radio"></param>
-        /// <param name="altura"></param>
-        /// <returns>Método que calcula el área del cono</returns>
-        public override double area(double gene, double radio, double altura)
+        /// <returns>Radio del cono</returns>
+        /// <remarks>Método get</remarks>
+        public void setRadio(double radio)
         {
-            return pi*radio*(radio+gene) ;
+            this.radio = radio;
         }
 
         /// <summary>
-        /// Método que retorna el volumen Cono. Recibe 3 párametros double altura, generatriz, radio. 
+        /// Método que retorna el área Cono. No recibe parametros.
         /// </summary>
-        /// <param name="gene"></param>
-        /// <param name="radio"></param>
-        /// <param name="altura"></param>
-        /// <returns>Método que calcula el volumen del cono</returns>
-        public override double volumen(double gene, double radio, double altura)
+        /// <returns>Método que calcula el área del cono</returns>
+        public override double area()
         {
-            return (pi*Math.Pow(radio,2)*altura)/3;
+            return pi*radio*(radio+ generatriz) ;
+        }
+
+        /// <summary>
+        /// Método que retorna el volumen Cono. No recibe parametros. 
+        /// </summary>
+        /// <returns>Método que calcula el volumen del cono</returns>
+        public override double volumen(double dato1=0)
+        {
+            return (pi*Math.Pow(radio,2)*getDato1())/3;
         }
 
         /// <summary>
@@ -86,13 +100,13 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <remarks>Método que retorna el historial del calculo realizado</remarks>
         public override string ToString()
         {
-            return "Cono" + "Altura = " + obtenerDato1().ToString()
+            return "Cono ;" + " Altura = " + getDato1().ToString()
 
-            + "Generatriz = " + obtenerG().ToString()
+            + "; Generatriz = " + getGeneratriz().ToString()
 
-             + "Radio = " + obtenerRadio().ToString()
+             + "; Radio = " + getRadio().ToString()
 
-            + " Área = " + area(obtenerG(), obtenerRadio(),obtenerDato1()) + "Volumen = " + volumen(obtenerG(), obtenerRadio(), obtenerDato1());
+            + "; Área = " + area() + "; Volumen = " + volumen();
         }
     }
 }

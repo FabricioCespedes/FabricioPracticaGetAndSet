@@ -31,9 +31,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
 
                 Cono cono = new Cono(altura,gene,radio);
 
-                textBox1.Text = cono.area(gene,radio,altura).ToString();
+                textBox1.Text = cono.area().ToString();
 
-                textBox2.Text = cono.volumen(gene, radio, altura).ToString();
+                textBox2.Text = cono.volumen().ToString();
 
                 Logica logica = new Logica();
 

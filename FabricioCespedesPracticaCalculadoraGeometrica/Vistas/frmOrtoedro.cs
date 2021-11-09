@@ -31,9 +31,9 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
 
                 Ortoedro ortoedro = new Ortoedro(a, b, c);
 
-                textBox1.Text = ortoedro.area(a, b, c).ToString();
+                textBox1.Text = ortoedro.area().ToString();
 
-                textBox2.Text = ortoedro.volumen(a, b,c).ToString();
+                textBox2.Text = ortoedro.volumen().ToString();
 
                 Logica logica = new Logica();
 

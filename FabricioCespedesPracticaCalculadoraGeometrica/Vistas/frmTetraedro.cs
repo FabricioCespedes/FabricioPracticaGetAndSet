@@ -25,7 +25,7 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
             {
                 Tetraedro tetraedro = new Tetraedro((double)numericUpDown1.Value);
 
-                textBox1.Text = tetraedro.area(tetraedro.obtenerDato1()).ToString();
+                textBox1.Text = tetraedro.area().ToString();
 
                 textBox2.Text = tetraedro.volumen(12).ToString();
 

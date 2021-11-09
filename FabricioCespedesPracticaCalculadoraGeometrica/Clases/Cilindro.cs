@@ -13,6 +13,17 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         double altura;
 
         /// <summary>
+        /// Método que retarno o establece la altura del cilindro.
+        /// </summary>
+        /// <returns>Altura del cilindro</returns>
+        /// <remarks>Método get and  set</remarks>
+        public double Altura 
+        { 
+            get => altura; 
+            set => altura = value;
+        }
+
+        /// <summary>
         /// Constructor vacio de la clase cilindro.
         /// </summary>
         /// <remarks>Constructor vacio, sirve para realizar instancia vacias</remarks>
@@ -33,40 +44,27 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
             this.altura = altura;
         }
 
-        /// <summary>
-        /// Método que retarna la altura.
-        /// </summary>
-        /// <returns>Altura del cilindro</returns>
-        /// <remarks>Método get</remarks>
-        public double retornarAltura()
-        {
-            return altura;
-        }
+
+
 
         /// <summary>
-        /// Método que retorna el área cilindro. Recibe 2 párametros double el radio y altura .
+        /// Método que retorna el área cilindro.No recibe parametros.
         /// </summary>
-        /// <param name="radio"></param>
-        /// <param name="altura"></param>
-        /// <param name="dato2"></param>
         /// <returns>Retorna el área</returns>
         /// <remarks>Método que calcula el área de un cilindro</remarks>
-        public override double area(double radio, double altura, double dato2 = 0)
+        public override double area()
         {
-            return (2 * pi )* radio*(altura+ radio) ;
+            return (2 * pi )* getDato1() * (altura+ getDato1()) ;
         }
 
         /// <summary>
-        /// Método que retorna el volumen cilindro. Recibe 2 párametros double el radio y altura .
+        /// Método que retorna el volumen cilindro. No recibe parametros.
         /// </summary>
-        /// <param name="radio"></param>
-        /// <param name="altura"></param>
-        /// <param name="dato2"></param>
         /// <returns>Retorna el volumen</returns>
         /// <remarks>Método que calcula el volumen de un cilindro</remarks>
-        public override double volumen(double radio, double altura, double dato2 = 0)
+        public override double volumen(double dato2 = 0)
         {
-            return ( pi * Math.Pow(radio, 2))* altura; ;
+            return ( pi * Math.Pow(getDato1(), 2))* altura; ;
         }
 
         /// <summary>
@@ -76,7 +74,7 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Clases
         /// <remarks>Método que retorna el historial</remarks>
         public override string ToString()
         {
-            return "Cilindro ;" + "Radio = " + obtenerDato1().ToString()+ "Altura = " + retornarAltura().ToString() + " Área = " + area(obtenerDato1(), retornarAltura()) + "Volumen = " + volumen(obtenerDato1(), retornarAltura());
+            return "Cilindro ;" + " Radio = " + getDato1().ToString()+ "; Altura = " + Altura.ToString() + "; Área = " + area() + "; Volumen = " + volumen();
         }
     }
 }

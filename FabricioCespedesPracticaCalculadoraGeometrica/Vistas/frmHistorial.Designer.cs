@@ -39,26 +39,28 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
             this.columnHeader1});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(267, 43);
+            this.listView1.Location = new System.Drawing.Point(193, 26);
             this.listView1.Name = "listView1";
             this.listView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listView1.Size = new System.Drawing.Size(404, 183);
+            this.listView1.Size = new System.Drawing.Size(606, 183);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "                                                              Historial";
-            this.columnHeader1.Width = 400;
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 600;
             // 
             // frmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 238);
+            this.ClientSize = new System.Drawing.Size(917, 238);
             this.Controls.Add(this.listView1);
             this.Name = "frmHistorial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHistorial";
             this.Load += new System.EventHandler(this.frmHistorial_Load);
             this.ResumeLayout(false);

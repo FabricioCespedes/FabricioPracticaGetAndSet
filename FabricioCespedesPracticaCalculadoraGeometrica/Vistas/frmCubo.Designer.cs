@@ -73,7 +73,7 @@ namespace FabricioCespedesPracticaCalculadoraGeometrica.Vistas
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(326, 165);
+            this.button1.Location = new System.Drawing.Point(326, 169);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(282, 49);
             this.button1.TabIndex = 9;
